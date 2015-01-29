@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "HRColorPickerViewController.h"
 
+@class WPEditorToolbarView;
 @class WPEditorField;
 @class WPEditorView;
 @class WPEditorViewController;
@@ -74,7 +75,10 @@ WPEditorViewControllerMode;
 @property (nonatomic, copy) NSString *bodyPlaceholderText;
 
 #pragma mark - Properties: Editor View
-@property (nonatomic, strong, readonly) WPEditorView *editorView;
+@property (nonatomic, strong, readwrite) WPEditorView *editorView;
+
+#pragma mark - Properties: Toolbar
+@property (nonatomic, strong, readwrite) WPEditorToolbarView* toolbarView;
 
 #pragma mark - Initializers
 
