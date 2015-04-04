@@ -48,8 +48,6 @@ static NSString* const WPEditorViewWebViewContentSizeKey = @"contentSize";
 @property (nonatomic, strong, readwrite) UITextField *sourceViewTitleField;
 @property (nonatomic, strong, readonly) UIView *sourceContentDividerView;
 @property (nonatomic, strong, readwrite) ZSSTextView *sourceView;
-@property (nonatomic, strong, readonly) UIWebView* webView;
-
 
 #pragma mark - Operation queues
 @property (nonatomic, strong, readwrite) NSOperationQueue* editorInteractionQueue;

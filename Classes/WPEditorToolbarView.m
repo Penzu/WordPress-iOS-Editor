@@ -3,21 +3,6 @@
 #import "WPEditorToolbarButton.h"
 #import "ZSSBarButtonItem.h"
 
-static int kDefaultToolbarItemPadding = 10;
-static int kDefaultToolbarLeftPadding = 10;
-
-static int kNegativeToolbarItemPadding = 12;
-static int kNegativeSixPlusToolbarItemPadding = 2;
-static int kNegativeLeftToolbarLeftPadding = 3;
-static int kNegativeRightToolbarPadding = 20;
-static int kNegativeSixPlusRightToolbarPadding = 24;
-
-static const CGFloat WPEditorToolbarHeight = 40;
-static const CGFloat WPEditorToolbarButtonHeight = 40;
-static const CGFloat WPEditorToolbarButtonWidth = 40;
-static const CGFloat WPEditorToolbarDividerLineHeight = 28;
-static const CGFloat WPEditorToolbarDividerLineWidth = 0.6f;
-
 @interface WPEditorToolbarView ()
 
 #pragma mark - Properties: Toolbar
@@ -28,9 +13,6 @@ static const CGFloat WPEditorToolbarDividerLineWidth = 0.6f;
 @property (nonatomic, weak) UIView *rightToolbarHolder;
 @property (nonatomic, weak) UIView *rightToolbarDivider;
 @property (nonatomic, weak) UIScrollView *toolbarScroll;
-
-#pragma mark - Properties: Toolbar items
-@property (nonatomic, strong, readwrite) UIBarButtonItem* htmlBarButtonItem;
 
 /**
  *  Toolbar items to include

@@ -81,6 +81,21 @@ typedef enum
     
 } WPEditorViewControllerElementTag;
 
+static int kDefaultToolbarItemPadding = 10;
+static int kDefaultToolbarLeftPadding = 10;
+
+static int kNegativeToolbarItemPadding = 12;
+static int kNegativeSixPlusToolbarItemPadding = 2;
+static int kNegativeLeftToolbarLeftPadding = 3;
+static int kNegativeRightToolbarPadding = 20;
+static int kNegativeSixPlusRightToolbarPadding = 24;
+
+static const CGFloat WPEditorToolbarHeight = 40;
+static const CGFloat WPEditorToolbarButtonHeight = 40;
+static const CGFloat WPEditorToolbarButtonWidth = 40;
+static const CGFloat WPEditorToolbarDividerLineHeight = 28;
+static const CGFloat WPEditorToolbarDividerLineWidth = 0.6f;
+
 @protocol WPEditorToolbarViewDelegate <NSObject>
 @required
 /**
@@ -101,10 +116,12 @@ typedef enum
  *  @class      WPEditorToolbarView
  *  @brief      Takes care of all the toolbar view visualization logic.
  */
-@interface WPEditorToolbarView : UIView
+@interface WPEditorToolbarView : UIView {
+	UIBarButtonItem *_htmlBarButtonItem;
+}
 
 #pragma mark - Properties: toolbar items
-
+@property (nonatomic, strong, readwrite) UIBarButtonItem* htmlBarButtonItem;
 @property (nonatomic, copy, readwrite) NSArray* items;
 
 #pragma mark - Properties: color
@@ -175,5 +192,7 @@ typedef enum
 - (void)clearSelectedToolbarItems;
 
 - (void)selectToolbarItemsForStyles:(NSArray*)styles;
+
+
 
 @end

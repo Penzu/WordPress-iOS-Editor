@@ -128,4 +128,7 @@ WPEditorViewControllerMode;
  */
 - (void)showInsertImageAlternatePicker;
 
+- (void)createToolbarView;
+- (NSMutableArray *)itemsForToolbar;
+
 @end
